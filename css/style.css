@@ -1,0 +1,249 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.menulink-1 a {
+  color: #ff652f;
+}
+
+.menu-button {
+  position: absolute;
+  top: 16px;
+}
+.menu-button .bar::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  height: 3px;
+  background-color: white;
+  width: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-button .bar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  height: 3px;
+  background-color: white;
+  width: 25px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-button .bar::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  height: 3px;
+  bottom: -8px;
+  background-color: white;
+  width: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+.bar {
+  padding: 100px transparent;
+  z-index: 100000;
+}
+@media (min-width: 550px) {
+  .bar {
+    display: none;
+  }
+}
+.bar.open {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(720deg);
+  background-color: transparent;
+}
+.bar.open::after {
+  transform: rotate(-45deg) translate(3px, -7px);
+  transition: all 0.5s ease-in-out;
+}
+.bar.open::before {
+  width: 25px;
+  transform: translate(-3px, 8px) rotate(45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+li {
+  font-size: 40px;
+  margin: 50px;
+  font-weight: 700;
+}
+li a {
+  text-decoration: none;
+}
+li a:hover {
+  transition: all 0.5s ease-in-out;
+  color: #ff652f;
+}
+@media (min-width: 550px) {
+  li {
+    font-size: 15px;
+    margin: 0px;
+    margin-right: 20px;
+  }
+}
+
+.navlink {
+  transform: scale(0);
+  visibility: hidden;
+}
+@media (min-width: 550px) {
+  .navlink {
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+  background-color: rgba(31, 31, 31, 0.98);
+  overflow: hidden;
+}
+.menu-nav.open {
+  transition: all 0.5s ease-in-out;
+  transform: translatex(0vh);
+  visibility: visible;
+}
+.menu-nav.open .menulink-1 {
+  visibility: visible;
+  transition: transform ease;
+  transition-delay: 0.19s;
+  transform: scale(1);
+}
+.menu-nav.open .menulink-2 {
+  visibility: visible;
+  transition: transform ease;
+  transition-delay: 0.38s;
+  transform: scale(1);
+}
+.menu-nav.open .menulink-3 {
+  visibility: visible;
+  transition: transform ease;
+  transition-delay: 0.57s;
+  transform: scale(1);
+}
+.menu-nav.open .menulink-4 {
+  visibility: visible;
+  transition: transform ease;
+  transition-delay: 0.76s;
+  transform: scale(1);
+}
+.menu-nav.itemup {
+  transition: all 0.5s ease-in-out;
+  transform: translatex(100vh);
+}
+@media (min-width: 550px) {
+  .menu-nav {
+    height: 50px;
+    background-color: transparent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (min-width: 550px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 50px;
+  }
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.menu-button {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+}
+.social i {
+  cursor: pointer;
+}
+.social i:hover {
+  transition: all 0.5s ease-in-out;
+  color: #ff652f;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+@media (min-width: 550px) {
+  header {
+    position: fixed;
+    left: 0px;
+  }
+}
+
+.name {
+  font-size: 70px;
+}
+.name .last {
+  color: #ff652f;
+}
+
+.skills, .intro {
+  font-size: large;
+  font-weight: 500;
+}
+
+.line {
+  margin: 1rem;
+  border: 1px solid white;
+  width: 100vw;
+}
+
+#home {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(8, 7, 7, 0.9), rgba(8, 7, 7, 0.3)), url("../img/model-1.jpg");
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */

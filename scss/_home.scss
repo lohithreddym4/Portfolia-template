@@ -1,0 +1,138 @@
+@import './config';
+.menulink-1 a{
+    color:$secondary-color;
+}
+.menu-button{
+    position: absolute;
+    top:16px;
+    .bar::before{
+        content:'';
+        position:absolute;
+        top:-8px;
+        height:3px;
+        background-color: white;
+        width:15px;
+        @include transition-ease;
+
+        
+    }
+    .bar{
+        position:absolute;
+        top:16px;
+        right:16px;
+        height:3px;
+        background-color: white;
+        width:25px;
+        @include transition-ease;
+
+    }
+    .bar::after{
+        content: '';
+        position:absolute;
+        right:0px;
+        height:3px;
+        bottom:-8px;
+        background-color: white;
+        width:25px;
+        @include transition-ease;
+
+    }
+}
+.bar{
+    @include mobile{
+        display: none;
+        
+    }
+    padding:100px transparent;
+    z-index: 100000;
+&.open{
+    @include transition-ease;
+    transform: rotate(720deg);
+    background-color: transparent;
+    &::after{
+        transform:rotate(-45deg) translate(3px,-7px);
+        @include transition-ease;
+    }
+    &::before{
+        width:25px;
+        transform:translate(-3px,8px) rotate(45deg);
+        @include transition-ease;
+    }
+}
+}
+li {
+
+    font-size: 40px;
+    margin: 50px;
+    font-weight:700 ;
+    a{
+    text-decoration: none;
+    }
+    a:hover{
+        @include transition-ease;
+        color:$secondary-color;
+    }
+    @include mobile(){
+        font-size: 15px;   
+        margin:0px;
+        margin-right:20px;
+    }
+
+}
+.navlink{
+    transform: scale(0);
+    visibility: hidden;
+    @include mobile(){
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+.menu-nav{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height:100vh;
+    width:100vw;
+    visibility: hidden;
+    background-color: rgba(31, 31, 31, 0.98);
+    overflow: hidden;
+    &.open{
+        @include transition-ease;
+        transform:translatex(-0vh);
+        visibility:visible;
+        @for $i from 1 through 4{
+            .menulink-#{$i}{
+                visibility: visible;
+                transition: transform ease;
+                transition-delay: $i*0.19s;
+                transform:scale(1);
+            }
+        }
+    }
+    &.itemup{
+        @include transition-ease;
+        transform:translatex(100vh);
+
+    }
+    @include mobile(){
+        height:50px;
+        background-color: transparent;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+.menu{
+    @include mobile(){
+    }
+}
+header{
+    @include mobile(){
+        background-color: rgba(0, 0, 0,0.1);
+        height:50px;
+    }
+}
