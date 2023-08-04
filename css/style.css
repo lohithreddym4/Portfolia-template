@@ -239,7 +239,10 @@ li a:hover {
 }
 
 header {
-  z-index: 100000;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(44, 44, 44, 0);
+  transition: all 0.5s ease-in-out;
 }
 
 .bio {
@@ -260,6 +263,233 @@ header {
   color: white;
 }
 .navlink.active a {
+  color: #ff652f;
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.project-home h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  color: #ff652f;
+  font-size: 30px;
+  margin-left: -50px;
+}
+
+.projects {
+  height: 60vh;
+}
+@media (max-width: 950px) {
+  .projects {
+    height: 90vh;
+  }
+}
+.projects .project {
+  height: 150px;
+  width: 150px;
+  border: solid;
+  margin: 10px;
+  background-size: cover;
+}
+.projects .projects-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: 20px;
+  width: 600px;
+  flex-wrap: wrap;
+}
+@media (max-width: 950px) {
+  .projects .projects-in {
+    width: 500px;
+  }
+}
+.projects .project-1 {
+  background-image: url(../img/project-1.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .project-1 span {
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-1 span:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-2 {
+  background-image: url(../img/project-2.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .project-2 span {
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-2 span:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-3 {
+  background-image: url(../img/project-3.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .project-3 span {
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-3 span:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-4 {
+  background-image: url(../img/project-4.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .project-4 span {
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-4 span:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-5 {
+  background-image: url(../img/project-5.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .project-5 span {
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-5 span:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-6 {
+  background-image: url(../img/project-6.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .project-6 span {
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-6 span:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project:hover {
+  transition: all 0.5s ease-in-out;
+  transition-property: background-color;
+  background: none;
+  background-color: #ff652f;
+}
+.projects .project:hover span {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.contact-home {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact div {
+  margin: 10px;
+  font-size: 20px;
   color: #ff652f;
 }
 
@@ -343,4 +573,11 @@ header {
   height: 100vh;
   background: linear-gradient(to right, rgba(8, 7, 7, 0.9), rgba(8, 7, 7, 0.3)), url("../img/model-1.jpg");
   background-size: cover;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */

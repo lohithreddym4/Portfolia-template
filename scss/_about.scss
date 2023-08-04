@@ -58,7 +58,10 @@
     height:200px;
 }
 header{
-    z-index: 100000;
+    width: 100%;
+    z-index:1;
+    background-color: rgba(44, 44, 44, 0);
+    @include transition-ease;
 }
 .bio{
     h2{
