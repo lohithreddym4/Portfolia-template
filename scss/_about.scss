@@ -1,0 +1,86 @@
+@import './config';
+
+#home1{
+    overflow: scroll;
+    overflow-x:hidden;
+    height: 100%;
+    width:100vw;
+    background:linear-gradient(
+        to right,
+        rgba($primary-color,0.9),
+        rgba($primary-color,0.3)
+        ),
+        url('../img/model-1.jpg');
+        background-size: cover;
+        position: absolute;
+        top:0px;
+
+}
+.exp{
+    overflow: hidden;
+    @include transition-ease;
+    position: relative;
+    top:60%;
+    height:100vh;
+    width: 100vw;
+    background-color: rgb(42, 42, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:30px;
+    justify-content: space-around;
+    .job{
+        h3{
+            padding:15px;
+            font-weight: 400;
+        }
+        h4{
+            padding-left:15px;
+            font-size: 15px;
+        }
+        p{
+            padding:15px;
+        }
+        background-color: rgb(89, 89, 89);
+        width:55%;
+        height:150px;
+        border-bottom:5px solid $secondary-color;
+        @include pc(){
+            width:50%;
+        }
+  
+    }
+}
+.social{
+    @include transition-ease;
+    flex-direction:column;
+    justify-content: space-between;
+    height:200px;
+}
+header{
+    z-index: 100000;
+}
+.bio{
+    h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    position: inherit;
+    top:20%;
+    left:1%;
+    p{
+        color:$secondary-color;
+        width:500px;
+    }
+}
+.navlink{
+    a{
+        color:white;
+    }
+    &.active{
+        a{
+
+            color:$secondary-color;
+        }
+    }
+}

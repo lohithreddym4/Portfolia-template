@@ -12,9 +12,7 @@
         height:3px;
         background-color: white;
         width:15px;
-        @include transition-ease;
-
-        
+        @include transition-ease;        
     }
     .bar{
         position:absolute;
@@ -24,7 +22,6 @@
         background-color: white;
         width:25px;
         @include transition-ease;
-
     }
     .bar::after{
         content: '';
@@ -44,7 +41,7 @@
         
     }
     padding:100px transparent;
-    z-index: 100000;
+    z-index: 1000;
 &.open{
     @include transition-ease;
     transform: rotate(720deg);
@@ -88,7 +85,6 @@ li {
     }
 }
 .menu-nav{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +93,7 @@ li {
     height:100vh;
     width:100vw;
     visibility: hidden;
-    background-color: rgba(31, 31, 31, 0.98);
+    background-color: rgba(8, 8, 8, 0.836);
     overflow: hidden;
     &.open{
         @include transition-ease;
@@ -119,20 +115,24 @@ li {
     }
     @include mobile(){
         height:50px;
-        background-color: transparent;
+        background-color:transparent;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
     }
 }
-.menu{
-    @include mobile(){
-    }
-}
 header{
     @include mobile(){
-        background-color: rgba(0, 0, 0,0.1);
+        padding-left: 10px;
+        background-color: rgb(0, 0, 0);
         height:50px;
+        .navlink a{
+            font-weight: 200;
+            font-size: 30px;
+        }
     }
+}
+.menu{
+    background: transparent;
 }

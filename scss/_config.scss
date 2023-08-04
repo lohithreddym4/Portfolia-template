@@ -21,3 +21,8 @@ $tertiary-color:white;
         @content;
     }
 }
+@mixin pc{
+    @media(max-width:950px){
+        @content;
+    }
+}
