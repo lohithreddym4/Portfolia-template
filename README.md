@@ -1,5 +1,5 @@
 # Portfolia-template
-Welcome to my Portfolio Website! This website showcases my personal details, including contact information, about me section, skills, and projects.
+Welcome to my Portfolio Template! This website showcases personal details, including contact information, about me section, skills, and projects.
 ## Features
 **About Me:** Get to know me better through a brief introduction and information about my background.
 
